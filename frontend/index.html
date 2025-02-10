@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>EasyShop</h1>
+
+    <nav>
+        <button onclick="loadProducts('men')">Men</button>
+        <button onclick="loadProducts('women')">Women</button>
+        <button onclick="loadProducts('kids')">Kids</button>
+        <button onclick="loadProducts('latest')">Latest</button>
+        <button onclick="viewCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+
+    <div id="products-container"></div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="placeOrder()">Place Order</button>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script> <!-- Ensures script loads after HTML -->
+
+</body>
+</html>
+
+
+
